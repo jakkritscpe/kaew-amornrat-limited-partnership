@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 160" width="760" height="160" fill="none">
+  <g transform="translate(0,0)">
+    <svg x="0" y="0" width="160" height="160" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="128" cy="120" r="86" stroke="#01675e" stroke-width="12" />
+      <path d="M42 120H214" stroke="#01675e" stroke-width="10" stroke-linecap="round" />
+      <path d="M52 92H204" stroke="#01675e" stroke-width="7" stroke-linecap="round" opacity="0.9" />
+      <path d="M52 148H204" stroke="#01675e" stroke-width="7" stroke-linecap="round" opacity="0.9" />
+      <path d="M128 34C104 55 90 86 90 120C90 154 104 185 128 206" stroke="#01675e" stroke-width="7" stroke-linecap="round" opacity="0.9" />
+      <path d="M128 34C152 55 166 86 166 120C166 154 152 185 128 206" stroke="#01675e" stroke-width="7" stroke-linecap="round" opacity="0.9" />
+      <path d="M98 88H158C166 88 172 94 172 102V138C172 146 166 152 158 152H98C90 152 84 146 84 138V102C84 94 90 88 98 88Z" stroke="#01675e" stroke-width="10" />
+      <path d="M104 140H152" stroke="#01675e" stroke-width="8" stroke-linecap="round" />
+      <path d="M118 152L112 172H144L138 152" stroke="#01675e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <g transform="translate(180,38)" fill="#01675e">
+      <text x="0" y="44" font-family="Sarabun, system-ui, -apple-system, Segoe UI, Arial" font-size="52" font-weight="700">หจก.แก้วอมรรัตน์</text>
+      <text x="0" y="90" font-family="Sarabun, system-ui, -apple-system, Segoe UI, Arial" font-size="30" font-weight="600" letter-spacing="0.5">IT SERVICES &amp; SOLUTIONS</text>
+    </g>
+  </g>
+</svg>

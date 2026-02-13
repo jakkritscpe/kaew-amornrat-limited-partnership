@@ -1,0 +1,378 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0A3D6B" />
+      <stop offset="40%" stopColor="#0D4A7A" />
+      <stop offset="100%" stopColor="#072F4D" />
+    </linearGradient>
+
+    <!-- Ambient light -->
+    <radialGradient id="ambientLight" cx="65%" cy="45%" r="45%">
+      <stop offset="0%" stopColor="#1A6BAA" stopOpacity="0.3" />
+      <stop offset="100%" stopColor="transparent" stopOpacity="0" />
+    </radialGradient>
+
+    <!-- Floor gradient -->
+    <linearGradient id="floorGrad" x1="960" y1="600" x2="960" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0E4F80" stopOpacity="0.5" />
+      <stop offset="100%" stopColor="#072F4D" stopOpacity="0.1" />
+    </linearGradient>
+
+    <!-- Server body gradients -->
+    <linearGradient id="srvFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#1E6FA8" />
+      <stop offset="100%" stopColor="#144D78" />
+    </linearGradient>
+    <linearGradient id="srvSide" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#11405F" />
+      <stop offset="100%" stopColor="#0D3350" />
+    </linearGradient>
+    <linearGradient id="srvTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#2A8AC4" />
+      <stop offset="100%" stopColor="#1E6FA8" />
+    </linearGradient>
+
+    <!-- Rack slot gradient -->
+    <linearGradient id="slotGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#0F3E5E" />
+      <stop offset="100%" stopColor="#0B2E48" />
+    </linearGradient>
+
+    <!-- Switch gradients -->
+    <linearGradient id="swFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#D1DEE8" />
+      <stop offset="100%" stopColor="#A8BDD0" />
+    </linearGradient>
+    <linearGradient id="swSide" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#96ADC2" />
+      <stop offset="100%" stopColor="#7B97AE" />
+    </linearGradient>
+    <linearGradient id="swTop" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stopColor="#D8E5EF" />
+      <stop offset="100%" stopColor="#E8F0F6" />
+    </linearGradient>
+
+    <!-- Monitor gradients -->
+    <linearGradient id="monScreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0E5A90" />
+      <stop offset="100%" stopColor="#0A4570" />
+    </linearGradient>
+    <linearGradient id="monFrame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#2C2C2C" />
+      <stop offset="100%" stopColor="#1A1A1A" />
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Soft shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" floodColor="#041E32" floodOpacity="0.5" />
+    </filter>
+
+    <!-- Subtle glow for equipment -->
+    <filter id="eqGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" floodColor="#1A8DD6" floodOpacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- ===== BACKGROUND ===== -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)" />
+  <rect width="1920" height="1080" fill="url(#ambientLight)" />
+
+  <!-- Subtle grid pattern on floor area -->
+  <g opacity="0.06">
+    <!-- Isometric grid lines going right -->
+    <line x1="600" y1="900" x2="1920" y2="500" stroke="white" strokeWidth="1" />
+    <line x1="600" y1="950" x2="1920" y2="550" stroke="white" strokeWidth="1" />
+    <line x1="600" y1="1000" x2="1920" y2="600" stroke="white" strokeWidth="1" />
+    <line x1="600" y1="1050" x2="1920" y2="650" stroke="white" strokeWidth="1" />
+    <line x1="500" y1="900" x2="1920" y2="450" stroke="white" strokeWidth="1" />
+    <line x1="400" y1="900" x2="1920" y2="400" stroke="white" strokeWidth="1" />
+    <!-- Isometric grid lines going left -->
+    <line x1="1920" y1="900" x2="600" y2="500" stroke="white" strokeWidth="1" />
+    <line x1="1920" y1="950" x2="600" y2="550" stroke="white" strokeWidth="1" />
+    <line x1="1920" y1="1000" x2="600" y2="600" stroke="white" strokeWidth="1" />
+    <line x1="1920" y1="1050" x2="600" y2="650" stroke="white" strokeWidth="1" />
+    <line x1="1920" y1="850" x2="500" y2="500" stroke="white" strokeWidth="1" />
+  </g>
+
+  <!-- Floor reflection/surface -->
+  <ellipse cx="1250" cy="780" rx="450" ry="120" fill="url(#floorGrad)" />
+
+  <!-- ===== MAIN SERVER RACK (right-center) ===== -->
+  <g filter="url(#shadow)" transform="translate(1100, 280)">
+    <!-- Server front face -->
+    <path d="M0 0 L200 0 L200 380 L0 380 Z" fill="url(#srvFront)" />
+    <!-- Server right side face -->
+    <path d="M200 0 L280 -40 L280 340 L200 380 Z" fill="url(#srvSide)" />
+    <!-- Server top face -->
+    <path d="M0 0 L80 -40 L280 -40 L200 0 Z" fill="url(#srvTop)" />
+
+    <!-- Rack slots (front) -->
+    <g>
+      <rect x="12" y="15" width="176" height="42" rx="3" fill="url(#slotGrad)" />
+      <rect x="12" y="65" width="176" height="42" rx="3" fill="url(#slotGrad)" />
+      <rect x="12" y="115" width="176" height="42" rx="3" fill="url(#slotGrad)" />
+      <rect x="12" y="165" width="176" height="42" rx="3" fill="url(#slotGrad)" />
+      <rect x="12" y="215" width="176" height="42" rx="3" fill="url(#slotGrad)" />
+      <rect x="12" y="265" width="176" height="42" rx="3" fill="url(#slotGrad)" />
+      <rect x="12" y="315" width="176" height="42" rx="3" fill="url(#slotGrad)" />
+    </g>
+
+    <!-- Drive bay details on each slot -->
+    <g opacity="0.6">
+      <rect x="22" y="24" width="90" height="5" rx="2" fill="#0A3050" />
+      <rect x="22" y="33" width="60" height="4" rx="2" fill="#0A3050" />
+      <rect x="22" y="74" width="85" height="5" rx="2" fill="#0A3050" />
+      <rect x="22" y="83" width="70" height="4" rx="2" fill="#0A3050" />
+      <rect x="22" y="124" width="80" height="5" rx="2" fill="#0A3050" />
+      <rect x="22" y="133" width="55" height="4" rx="2" fill="#0A3050" />
+      <rect x="22" y="174" width="95" height="5" rx="2" fill="#0A3050" />
+      <rect x="22" y="183" width="65" height="4" rx="2" fill="#0A3050" />
+      <rect x="22" y="224" width="75" height="5" rx="2" fill="#0A3050" />
+      <rect x="22" y="233" width="50" height="4" rx="2" fill="#0A3050" />
+      <rect x="22" y="274" width="88" height="5" rx="2" fill="#0A3050" />
+      <rect x="22" y="283" width="58" height="4" rx="2" fill="#0A3050" />
+      <rect x="22" y="324" width="82" height="5" rx="2" fill="#0A3050" />
+      <rect x="22" y="333" width="48" height="4" rx="2" fill="#0A3050" />
+    </g>
+
+    <!-- LED indicators -->
+    <g filter="url(#glow)">
+      <!-- Green power LEDs -->
+      <circle cx="170" cy="30" r="3.5" fill="#4ADE80" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.5;0.9" dur="2.5s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="170" cy="80" r="3.5" fill="#4ADE80" opacity="0.85">
+        <animate attributeName="opacity" values="0.85;0.4;0.85" dur="3s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="170" cy="130" r="3.5" fill="#4ADE80" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.5;0.9" dur="2.2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="170" cy="180" r="3.5" fill="#4ADE80" opacity="0.85" />
+      <circle cx="170" cy="230" r="3.5" fill="#4ADE80" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.8s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="170" cy="280" r="3.5" fill="#4ADE80" opacity="0.85" />
+      <circle cx="170" cy="330" r="3.5" fill="#4ADE80" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.5;0.9" dur="3.2s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- Blue activity LEDs -->
+      <circle cx="158" cy="30" r="2.5" fill="#60A5FA" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.1;0.7" dur="0.8s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="158" cy="80" r="2.5" fill="#60A5FA" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.15;0.6" dur="0.6s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="158" cy="130" r="2.5" fill="#60A5FA" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.2;0.7" dur="1s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="158" cy="180" r="2.5" fill="#60A5FA" opacity="0.65">
+        <animate attributeName="opacity" values="0.65;0.1;0.65" dur="0.7s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="158" cy="230" r="2.5" fill="#60A5FA" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.15;0.7" dur="0.9s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="158" cy="280" r="2.5" fill="#60A5FA" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.1;0.6" dur="0.5s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="158" cy="330" r="2.5" fill="#60A5FA" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.2;0.7" dur="1.1s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Ventilation lines on side -->
+    <g opacity="0.3">
+      <line x1="215" y1="20" x2="265" y2="0" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="45" x2="265" y2="25" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="70" x2="265" y2="50" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="95" x2="265" y2="75" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="120" x2="265" y2="100" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="145" x2="265" y2="125" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="170" x2="265" y2="150" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="195" x2="265" y2="175" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="220" x2="265" y2="200" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="245" x2="265" y2="225" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="270" x2="265" y2="250" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="295" x2="265" y2="275" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="320" x2="265" y2="300" stroke="#0A3050" strokeWidth="2" />
+      <line x1="215" y1="345" x2="265" y2="325" stroke="#0A3050" strokeWidth="2" />
+    </g>
+  </g>
+
+  <!-- ===== SECOND SERVER RACK (smaller, behind-left of main) ===== -->
+  <g filter="url(#eqGlow)" transform="translate(980, 340)">
+    <!-- Front -->
+    <path d="M0 0 L150 0 L150 300 L0 300 Z" fill="url(#srvFront)" opacity="0.85" />
+    <!-- Right side -->
+    <path d="M150 0 L210 -30 L210 270 L150 300 Z" fill="url(#srvSide)" opacity="0.85" />
+    <!-- Top -->
+    <path d="M0 0 L60 -30 L210 -30 L150 0 Z" fill="url(#srvTop)" opacity="0.85" />
+
+    <!-- Slots -->
+    <g opacity="0.7">
+      <rect x="10" y="12" width="130" height="34" rx="2" fill="url(#slotGrad)" />
+      <rect x="10" y="52" width="130" height="34" rx="2" fill="url(#slotGrad)" />
+      <rect x="10" y="92" width="130" height="34" rx="2" fill="url(#slotGrad)" />
+      <rect x="10" y="132" width="130" height="34" rx="2" fill="url(#slotGrad)" />
+      <rect x="10" y="172" width="130" height="34" rx="2" fill="url(#slotGrad)" />
+      <rect x="10" y="212" width="130" height="34" rx="2" fill="url(#slotGrad)" />
+      <rect x="10" y="252" width="130" height="34" rx="2" fill="url(#slotGrad)" />
+    </g>
+
+    <!-- LEDs -->
+    <g filter="url(#glow)">
+      <circle cx="128" cy="26" r="3" fill="#4ADE80" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="128" cy="66" r="3" fill="#4ADE80" opacity="0.75" />
+      <circle cx="128" cy="106" r="3" fill="#4ADE80" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2.5s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="128" cy="146" r="3" fill="#F59E0B" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="1.5s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="128" cy="186" r="3" fill="#4ADE80" opacity="0.8" />
+      <circle cx="128" cy="226" r="3" fill="#4ADE80" opacity="0.75">
+        <animate attributeName="opacity" values="0.75;0.35;0.75" dur="2.8s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="128" cy="266" r="3" fill="#4ADE80" opacity="0.8" />
+
+      <circle cx="118" cy="26" r="2" fill="#60A5FA" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.1;0.5" dur="0.7s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="118" cy="66" r="2" fill="#60A5FA" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.1;0.4" dur="0.9s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="118" cy="106" r="2" fill="#60A5FA" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.1;0.5" dur="0.6s" repeatCount="indefinite" />
+      </circle>
+    </g>
+  </g>
+
+  <!-- ===== NETWORK SWITCH (bottom-front) ===== -->
+  <g filter="url(#eqGlow)" transform="translate(1050, 700)">
+    <!-- Top face -->
+    <path d="M0 0 L50 -25 L280 -25 L230 0 Z" fill="url(#swTop)" />
+    <!-- Front face -->
+    <path d="M0 0 L230 0 L230 35 L0 35 Z" fill="url(#swFront)" />
+    <!-- Right side -->
+    <path d="M230 0 L280 -25 L280 10 L230 35 Z" fill="url(#swSide)" />
+
+    <!-- Port indicators -->
+    <g>
+      <rect x="15" y="8" width="8" height="12" rx="1" fill="#8BA4B8" />
+      <rect x="28" y="8" width="8" height="12" rx="1" fill="#8BA4B8" />
+      <rect x="41" y="8" width="8" height="12" rx="1" fill="#8BA4B8" />
+      <rect x="54" y="8" width="8" height="12" rx="1" fill="#8BA4B8" />
+      <rect x="67" y="8" width="8" height="12" rx="1" fill="#8BA4B8" />
+      <rect x="80" y="8" width="8" height="12" rx="1" fill="#8BA4B8" />
+      <rect x="93" y="8" width="8" height="12" rx="1" fill="#8BA4B8" />
+      <rect x="106" y="8" width="8" height="12" rx="1" fill="#8BA4B8" />
+      <rect x="125" y="8" width="8" height="12" rx="1" fill="#8BA4B8" />
+      <rect x="138" y="8" width="8" height="12" rx="1" fill="#8BA4B8" />
+      <rect x="151" y="8" width="8" height="12" rx="1" fill="#8BA4B8" />
+      <rect x="164" y="8" width="8" height="12" rx="1" fill="#8BA4B8" />
+    </g>
+
+    <!-- Port LEDs -->
+    <g filter="url(#glow)">
+      <circle cx="19" cy="6" r="1.5" fill="#4ADE80" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.4s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="32" cy="6" r="1.5" fill="#4ADE80" opacity="0.7" />
+      <circle cx="45" cy="6" r="1.5" fill="#4ADE80" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="0.6s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="58" cy="6" r="1.5" fill="#4ADE80" opacity="0.75">
+        <animate attributeName="opacity" values="0.75;0.2;0.75" dur="0.5s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="71" cy="6" r="1.5" fill="#4ADE80" opacity="0.8" />
+      <circle cx="84" cy="6" r="1.5" fill="#F59E0B" opacity="0.6" />
+      <circle cx="97" cy="6" r="1.5" fill="#4ADE80" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.2;0.7" dur="0.45s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="110" cy="6" r="1.5" fill="#4ADE80" opacity="0.8" />
+      <circle cx="129" cy="6" r="1.5" fill="#60A5FA" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.2;0.7" dur="0.35s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="142" cy="6" r="1.5" fill="#60A5FA" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.15;0.6" dur="0.55s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Power LED -->
+    <g filter="url(#glow)">
+      <circle cx="210" cy="12" r="2.5" fill="#4ADE80" opacity="0.9" />
+    </g>
+  </g>
+
+  <!-- ===== SMALL UPS / DEVICE (front-right) ===== -->
+  <g filter="url(#eqGlow)" transform="translate(1380, 620)">
+    <!-- Front -->
+    <path d="M0 0 L100 0 L100 120 L0 120 Z" fill="url(#srvFront)" opacity="0.7" />
+    <!-- Side -->
+    <path d="M100 0 L140 -20 L140 100 L100 120 Z" fill="url(#srvSide)" opacity="0.7" />
+    <!-- Top -->
+    <path d="M0 0 L40 -20 L140 -20 L100 0 Z" fill="url(#srvTop)" opacity="0.7" />
+
+    <!-- Front detail -->
+    <rect x="10" y="15" width="80" height="30" rx="3" fill="url(#slotGrad)" opacity="0.6" />
+    <rect x="10" y="55" width="80" height="45" rx="3" fill="url(#slotGrad)" opacity="0.5" />
+
+    <!-- LEDs -->
+    <g filter="url(#glow)">
+      <circle cx="80" cy="25" r="2.5" fill="#4ADE80" opacity="0.8" />
+      <circle cx="70" cy="25" r="2" fill="#60A5FA" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.1;0.5" dur="0.8s" repeatCount="indefinite" />
+      </circle>
+    </g>
+  </g>
+
+  <!-- ===== NETWORK CABLES ===== -->
+  <g opacity="0.25" strokeWidth="2.5" strokeLinecap="round">
+    <!-- Cable from main server to switch -->
+    <path d="M1200 660 Q1180 680 1170 700" stroke="#60A5FA" fill="none">
+      <animate attributeName="stroke-opacity" values="0.3;0.15;0.3" dur="2s" repeatCount="indefinite" />
+    </path>
+    <path d="M1220 660 Q1200 680 1190 700" stroke="#4ADE80" fill="none">
+      <animate attributeName="stroke-opacity" values="0.25;0.1;0.25" dur="2.5s" repeatCount="indefinite" />
+    </path>
+    <!-- Cable from second server to switch -->
+    <path d="M1060 640 Q1070 670 1080 700" stroke="#60A5FA" fill="none">
+      <animate attributeName="stroke-opacity" values="0.3;0.12;0.3" dur="1.8s" repeatCount="indefinite" />
+    </path>
+    <!-- Cable from switch to UPS -->
+    <path d="M1280 710 Q1340 680 1390 640" stroke="#60A5FA" fill="none" opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.2;0.08;0.2" dur="2.2s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- ===== AMBIENT LIGHT REFLECTIONS ===== -->
+  <!-- Light beam from server LEDs -->
+  <g opacity="0.04">
+    <rect x="1260" y="300" width="4" height="340" fill="#4ADE80" rx="2">
+      <animate attributeName="opacity" values="0.06;0.02;0.06" dur="3s" repeatCount="indefinite" />
+    </rect>
+    <rect x="1248" y="300" width="3" height="340" fill="#60A5FA" rx="1.5">
+      <animate attributeName="opacity" values="0.05;0.01;0.05" dur="2s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- Soft top light source -->
+  <ellipse cx="1200" cy="180" rx="300" ry="80" fill="white" opacity="0.02" />
+
+  <!-- Floor reflection of server -->
+  <g opacity="0.06" transform="translate(1100, 660) scale(1, -0.15) skewX(-10)">
+    <rect width="200" height="380" fill="#1A8DD6" rx="4" />
+  </g>
+</svg>
